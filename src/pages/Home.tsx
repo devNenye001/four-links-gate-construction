@@ -3,10 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Building, 
-  Briefcase, 
   Users, 
   Star, 
-  Milestone,
   ArrowRight,
   UserCheck,
   DollarSign
@@ -141,6 +139,25 @@ export const Home: React.FC = () => {
 
   const aboutDescription = "FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED is a registered construction and engineering firm committed to delivering safe, durable, and cost-effective infrastructure solutions across Niger State and beyond.";
 
+  const testimonialList = [
+    {
+      name: "David Ajah",
+      quote: "The electrical installation was completed efficiently and professionally. We appreciated their attention to detail and commitment to doing the job properly."
+    },
+    {
+      name: "Amina Bello",
+      quote: "The structural building construction work was carried out to the highest standards. Excellent communication and attention to detail throughout the process."
+    },
+    {
+      name: "Ibrahim Musa",
+      quote: "Their real estate services are fantastic. They guided us patiently and helped us secure the perfect property within our budget."
+    },
+    {
+      name: "Elizabeth Ndaji",
+      quote: "Superb project management. The site supervision was thorough, and they delivered high-quality results within our timeline."
+    }
+  ];
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -181,7 +198,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Slanted Scrolling Ticker Banner (Rendered OUTSIDE Hero container to prevent overflow clipping) */}
+      {/* 2. Slanted Scrolling Ticker Banner */}
       <div className="relative w-full z-20 pointer-events-none h-16 overflow-visible -mt-8">
         <div 
           className="absolute left-[-5%] w-[110%] bg-[#051C3F] py-4 transform rotate-[-2deg] flex items-center overflow-hidden shadow-lg border-t border-b border-blue-950/20"
@@ -222,10 +239,10 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Services Section */}
-      <section id="services" className="bg-gray-50/50 border-y border-gray-100 py-20 md:py-28">
+      {/* 4. Services Section (Mockup content & straight borders) */}
+      <section id="services" className="bg-white border-y border-gray-100 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-16">
             <div>
               <div className="flex items-center mb-3">
                 <OrangeSlantedBoxes />
@@ -236,68 +253,69 @@ export const Home: React.FC = () => {
               </h2>
             </div>
             <p className="text-gray-500 font-regular tracking-regular text-[15px] max-w-md leading-relaxed">
-              We provide complete construction services, road engineering, and property brokerage tailored to match your specific layout needs and budget requirements.
+              Whether you're starting a new project, upgrading an existing property, or looking for a path to homeownership, we provide solutions under one roof.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Card 1: Building */}
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 flex flex-col items-start transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center mb-6 border border-gray-100">
-                <Building className="w-6 h-6 text-[#FF5C00]" />
+            <div className="bg-gray-50/50 p-8 border border-gray-100 flex flex-col items-start transition-colors duration-300">
+              <div className="w-12 h-12 flex items-center justify-center mb-6 text-gray-900">
+                <Building className="w-8 h-8" />
               </div>
-              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Building Construction</h3>
+              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Building & Structural Works</h3>
               <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed">
-                From initial layout to final inspection, we ensure the highest standards of safety, quality, and structural integrity.
+                From residential buildings to structural projects, we deliver durable construction with attention to quality and detail.
               </p>
             </div>
 
-            {/* Card 2: Road */}
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 flex flex-col items-start transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center mb-6 border border-gray-100">
-                <Milestone className="w-6 h-6 text-[#FF5C00]" />
+            {/* Card 2: Electrical */}
+            <div className="bg-gray-50/50 p-8 border border-gray-100 flex flex-col items-start transition-colors duration-300">
+              <div className="w-12 h-12 flex items-center justify-center mb-6 text-gray-900">
+                <Building className="w-8 h-8" />
               </div>
-              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Road Construction</h3>
+              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Electrical Installation</h3>
               <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed">
-                Expert road construction services including grading, paving, drainage systems, and maintenance for durability.
+                From residential buildings to structural projects, we deliver durable construction with attention to quality and detail.
               </p>
             </div>
 
             {/* Card 3: Project Management */}
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 flex flex-col items-start transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center mb-6 border border-gray-100">
-                <Briefcase className="w-6 h-6 text-[#FF5C00]" />
+            <div className="bg-gray-50/50 p-8 border border-gray-100 flex flex-col items-start transition-colors duration-300">
+              <div className="w-12 h-12 flex items-center justify-center mb-6 text-gray-900">
+                <Building className="w-8 h-8" />
               </div>
               <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Project Management</h3>
               <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed">
-                Comprehensive management from concept to completion, ensuring projects are delivered on time, within budget, and to spec.
+                From residential buildings to structural projects, we deliver durable construction with attention to quality and detail.
               </p>
             </div>
 
-            {/* Card 4: Highlighted Real Estate (Solid Orange BG) */}
-            <div className="bg-[#FF5C00] text-white p-8 rounded-3xl flex flex-col items-start transition-colors duration-300">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
-                <Building className="w-6 h-6 text-white" />
+            {/* Card 4: Real Estate Services (Solid Orange) */}
+            <div className="bg-[#FF5C00] text-white p-8 flex flex-col items-start transition-colors duration-300">
+              <div className="w-12 h-12 flex items-center justify-center mb-6 text-white">
+                <Building className="w-8 h-8" />
               </div>
               <h3 className="text-white font-medium tracking-medium text-lg mb-3">Real Estate Services</h3>
               <p className="text-white/85 font-regular tracking-regular text-[14px] leading-relaxed">
-                Professional brokerage, property management, and advisory services. Find or develop your next home or investment with us.
+                From residential buildings to structural projects, we deliver durable construction with attention to quality and detail.
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a
-              href="#contact-us"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
+            <Link
+              to="/services"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
             >
-              Explore Our Services
-            </a>
+              <span>Explore Our Services</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 5. House on Credit Section (Pay Small Small - Straight borders) */}
+      {/* 5. House on Credit Section */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 md:py-28 w-full text-center">
         <div className="flex items-center justify-center mb-4">
           <OrangeSlantedBoxes />
@@ -400,10 +418,10 @@ export const Home: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[1, 2, 3, 4].map((_, idx) => (
-            <div key={idx} className="bg-[#E5E7EB]/50 border border-gray-200 p-8 rounded-3xl flex flex-col justify-between">
-              <p className="text-gray-600 font-regular tracking-regular text-[14px] leading-relaxed mb-6">
-                "The electrical installation was completed efficiently and professionally. We appreciated their attention to detail and commitment to doing the job properly."
+          {testimonialList.map((item, idx) => (
+            <div key={idx} className="bg-gray-50/50 border border-gray-100 p-8 flex flex-col justify-between">
+              <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed mb-6 italic">
+                "{item.quote}"
               </p>
               <div>
                 <div className="flex items-center gap-1 mb-3 text-amber-400">
@@ -411,7 +429,7 @@ export const Home: React.FC = () => {
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-800 font-semibold tracking-medium text-sm">MR David Ajah</p>
+                <p className="text-gray-800 font-medium tracking-medium text-sm">MR {item.name}</p>
               </div>
             </div>
           ))}
