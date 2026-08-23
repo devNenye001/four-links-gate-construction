@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #08060D;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DM Sans Medium (weight 400, -3% letter spacing) */
+.font-medium, .tracking-medium {
+  font-weight: 400 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* DM Sans Regular (weight 300, -2% letter spacing) */
+.font-regular, .tracking-regular {
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Default base styling */
+p, span, div, a {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+/* Responsive CTA Banner Background */
+.cta-banner-bg {
+  background-image: url('/finalCTA-bg2.jpeg');
+  background-color: #FF5C00;
+}
+@media (min-width: 1024px) {
+  .cta-banner-bg {
+    background-image: url('/finalCTA-bg.svg');
+  }
+}
+
+/* Infinite Marquee Ticker Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
