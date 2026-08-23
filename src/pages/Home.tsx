@@ -7,7 +7,10 @@ import {
   Star, 
   ArrowRight,
   UserCheck,
-  DollarSign
+  DollarSign,
+  Zap,
+  Briefcase,
+  Home as HomeIcon
 } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 
@@ -272,7 +275,7 @@ export const Home: React.FC = () => {
             {/* Card 2: Electrical */}
             <div className="bg-gray-50/50 p-8 border border-gray-100 flex flex-col items-start transition-colors duration-300">
               <div className="w-12 h-12 flex items-center justify-center mb-6 text-gray-900">
-                <Building className="w-8 h-8" />
+                <Zap className="w-8 h-8 text-[#FF5C00]" />
               </div>
               <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Electrical Installation</h3>
               <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed">
@@ -283,7 +286,7 @@ export const Home: React.FC = () => {
             {/* Card 3: Project Management */}
             <div className="bg-gray-50/50 p-8 border border-gray-100 flex flex-col items-start transition-colors duration-300">
               <div className="w-12 h-12 flex items-center justify-center mb-6 text-gray-900">
-                <Building className="w-8 h-8" />
+                <Briefcase className="w-8 h-8 text-gray-900" />
               </div>
               <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Project Management</h3>
               <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed">
@@ -294,7 +297,7 @@ export const Home: React.FC = () => {
             {/* Card 4: Real Estate Services (Solid Orange) */}
             <div className="bg-[#FF5C00] text-white p-8 flex flex-col items-start transition-colors duration-300">
               <div className="w-12 h-12 flex items-center justify-center mb-6 text-white">
-                <Building className="w-8 h-8" />
+                <HomeIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-white font-medium tracking-medium text-lg mb-3">Real Estate Services</h3>
               <p className="text-white/85 font-regular tracking-regular text-[14px] leading-relaxed">
