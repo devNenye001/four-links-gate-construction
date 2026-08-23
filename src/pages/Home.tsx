@@ -342,15 +342,13 @@ export const Home: React.FC = () => {
           />
         </div>
 
-        <a
-          href="https://wa.me/2347049463239"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/housing-on-credit"
           className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
         >
           <span>Learn More</span>
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
         <p className="text-gray-400 text-xs mt-3 font-regular tracking-regular">
           Terms, eligibility and payment arrangements apply.
         </p>

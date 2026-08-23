@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Projects } from './pages/Projects';
 import { About } from './pages/About';
+import { HousingOnCredit } from './pages/HousingOnCredit';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 import { Footer } from './components/Footer';
@@ -14,8 +15,8 @@ import './App.css';
 const AppContent: React.FC = () => {
   const location = useLocation();
   
-  // Home (/), Services (/services), Projects (/projects), About (/about) and Contact (/contact) pages feature transparent overlay Navbars
-  const isTransparentPage = location.pathname === '/' || location.pathname === '/services' || location.pathname === '/projects' || location.pathname === '/about' || location.pathname === '/contact';
+  // Home, Services, Projects, About, Contact and Housing on Credit pages feature transparent overlay Navbars
+  const isTransparentPage = location.pathname === '/' || location.pathname === '/services' || location.pathname === '/projects' || location.pathname === '/about' || location.pathname === '/contact' || location.pathname === '/housing-on-credit';
 
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden select-none">
@@ -34,6 +35,8 @@ const AppContent: React.FC = () => {
             <Route path="/projects" element={<Projects />} />
             {/* About Page */}
             <Route path="/about" element={<About />} />
+            {/* Housing On Credit Page */}
+            <Route path="/housing-on-credit" element={<HousingOnCredit />} />
             {/* Contact Page */}
             <Route path="/contact" element={<Contact />} />
             {/* NotFound Fallback */}
