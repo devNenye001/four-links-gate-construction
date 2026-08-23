@@ -47,23 +47,47 @@ export const HousingOnCredit: React.FC = () => {
 
       {/* 2. Intro Paragraph Section */}
       <section className="max-w-4xl mx-auto px-6 py-12 text-center">
-        <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-6">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-6"
+        >
           You Don't Have to Pay Everything at Once.
-        </h2>
-        <p className="text-gray-500 font-regular tracking-regular text-base leading-relaxed">
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="text-gray-500 font-regular tracking-regular text-base leading-relaxed"
+        >
           We believe owning land or a home should be more achievable. Our Housing on Credit Scheme allows eligible clients to spread the cost of their property over an agreed period, making it easier to plan your finances while working towards full ownership. Whether you're looking to buy land or own a house, we can help you take that step without having to provide the entire cost upfront.
-        </p>
+        </motion.p>
       </section>
 
       {/* 3. What can you get Section */}
       <section className="max-w-5xl mx-auto px-6 py-16 w-full text-center">
-        <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-12">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-12"
+        >
           What can you get?
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 text-left">
           {/* Land Column */}
-          <div className="flex flex-col items-start">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col items-start"
+          >
             <h3 className="text-gray-900 font-medium tracking-medium text-lg uppercase mb-3">
               Land on Credit
             </h3>
@@ -79,10 +103,16 @@ export const HousingOnCredit: React.FC = () => {
               <span>Enquire About Land</span>
               <ArrowRight className="w-4 h-4" />
             </a>
-          </div>
+          </motion.div>
 
           {/* House Column */}
-          <div className="flex flex-col items-start">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col items-start"
+          >
             <h3 className="text-gray-900 font-medium tracking-medium text-lg uppercase mb-3">
               House on Credit
             </h3>
@@ -98,7 +128,7 @@ export const HousingOnCredit: React.FC = () => {
               <span>Enquire About House</span>
               <ArrowRight className="w-4 h-4" />
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -109,9 +139,15 @@ export const HousingOnCredit: React.FC = () => {
             <OrangeSlantedBoxes />
             <span className="text-[#FF5C00] font-medium tracking-medium text-sm uppercase">Process</span>
           </div>
-          <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl mb-16"
+          >
             Your Journey to Ownership
-          </h2>
+          </motion.h2>
 
           <div className="space-y-12 max-w-2xl mx-auto">
             {[
@@ -141,14 +177,21 @@ export const HousingOnCredit: React.FC = () => {
                 desc: "Once your payment obligations are fulfilled, the applicable documentation and ownership process will be completed according to the agreed terms."
               }
             ].map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center">
+              <motion.div 
+                key={idx} 
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="flex flex-col items-center"
+              >
                 <h3 className="text-[#FF5C00] font-medium tracking-medium text-lg mb-2">
                   {step.num} — {step.title}
                 </h3>
                 <p className="text-gray-500 font-regular tracking-regular text-[15px] leading-relaxed">
                   {step.desc}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

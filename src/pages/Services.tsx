@@ -91,8 +91,12 @@ export const Services: React.FC = () => {
           {/* List of 5 Services */}
           <div className="flex flex-col gap-8">
             {serviceList.map((service, index) => (
-              <div 
+              <motion.div 
                 key={index} 
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: index * 0.05 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-gray-50/40 border border-gray-100 p-5 sm:p-8 md:p-10 transition-shadow duration-300 hover:shadow-sm"
               >
                 {/* Text Panel */}
@@ -116,7 +120,7 @@ export const Services: React.FC = () => {
                     className="w-full h-full object-cover" 
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

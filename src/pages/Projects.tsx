@@ -62,8 +62,12 @@ export const Projects: React.FC = () => {
           {/* Videos Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {projectVideos.map((videoSrc, index) => (
-              <div 
+              <motion.div 
                 key={index} 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
                 className="relative aspect-[3/4] overflow-hidden border border-gray-100 bg-gray-50 group shadow-sm transition-transform duration-300 hover:scale-[1.01]"
               >
                 <video
@@ -75,7 +79,7 @@ export const Projects: React.FC = () => {
                   controls
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

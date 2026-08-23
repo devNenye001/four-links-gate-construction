@@ -157,35 +157,28 @@ export const About: React.FC = () => {
           <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl mb-16">Who Build With FOUR GATES LINKS?</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-xl bg-[#FF5C00] flex items-center justify-center mb-6">
-                <DollarSign className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-2">Comprehensive Solutions</h3>
-              <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed max-w-xs">
-                We work toward practical solutions that provide value for your investment.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-xl bg-[#FF5C00] flex items-center justify-center mb-6">
-                <UserCheck className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-2">Professional Service</h3>
-              <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed max-w-xs">
-                Your project is handled with attention, communication and accountability.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-xl bg-[#FF5C00] flex items-center justify-center mb-6">
-                <Users className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-2">Trusted Partnerships</h3>
-              <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed max-w-xs">
-                Construction, electrical services, project management and real estate solutions in one place.
-              </p>
-            </div>
+            {[
+              { icon: <DollarSign className="w-5 h-5 text-white" />, title: "Comprehensive Solutions", desc: "We work toward practical solutions that provide value for your investment." },
+              { icon: <UserCheck className="w-5 h-5 text-white" />, title: "Professional Service", desc: "Your project is handled with attention, communication and accountability." },
+              { icon: <Users className="w-5 h-5 text-white" />, title: "Trusted Partnerships", desc: "Construction, electrical services, project management and real estate solutions in one place." }
+            ].map((benefit, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#FF5C00] flex items-center justify-center mb-6">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-2">{benefit.title}</h3>
+                <p className="text-gray-500 font-regular tracking-regular text-[14px] leading-relaxed max-w-xs mx-auto">
+                  {benefit.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -201,8 +194,12 @@ export const About: React.FC = () => {
 
           <div className="flex flex-col gap-8">
             {serviceList.map((service, index) => (
-              <div 
+              <motion.div 
                 key={index} 
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: index * 0.05 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-gray-50/40 border border-gray-100 p-5 sm:p-8 md:p-10 transition-shadow duration-300 hover:shadow-sm"
               >
                 <div className={`flex flex-col items-start pr-0 md:pr-4 ${index % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}>
@@ -224,7 +221,7 @@ export const About: React.FC = () => {
                     className="w-full h-full object-cover" 
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -308,7 +305,14 @@ export const About: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamList.map((member, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex flex-col items-center text-center"
+              >
                 <div className="w-full aspect-[4/5] overflow-hidden border border-gray-100 mb-5 bg-gray-50">
                   <img 
                     src={member.img} 
@@ -317,8 +321,8 @@ export const About: React.FC = () => {
                   />
                 </div>
                 <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-1">{member.name}</h3>
-                <p className="text-gray-400 font-regular tracking-regular text-sm">{member.role}</p>
-              </div>
+                <p className="text-gray-500 font-regular tracking-regular text-[14px]">{member.role}</p>
+              </motion.div>
             ))}
           </div>
         </div>
