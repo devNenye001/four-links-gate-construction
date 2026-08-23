@@ -144,18 +144,22 @@ export const Home: React.FC = () => {
 
   const testimonialList = [
     {
+      prefix: "MR",
       name: "David Ajah",
       quote: "The electrical installation was completed efficiently and professionally. We appreciated their attention to detail and commitment to doing the job properly."
     },
     {
+      prefix: "MRS",
       name: "Amina Bello",
       quote: "The structural building construction work was carried out to the highest standards. Excellent communication and attention to detail throughout the process."
     },
     {
+      prefix: "MR",
       name: "Ibrahim Musa",
       quote: "Their real estate services are fantastic. They guided us patiently and helped us secure the perfect property within our budget."
     },
     {
+      prefix: "MRS",
       name: "Elizabeth Ndaji",
       quote: "Superb project management. The site supervision was thorough, and they delivered high-quality results within our timeline."
     }
@@ -432,7 +436,7 @@ export const Home: React.FC = () => {
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-800 font-medium tracking-medium text-sm">MR {item.name}</p>
+                <p className="text-gray-800 font-medium tracking-medium text-sm">{item.prefix} {item.name}</p>
               </div>
             </div>
           ))}
