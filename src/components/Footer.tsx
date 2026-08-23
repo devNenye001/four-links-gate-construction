@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -66,25 +67,31 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-16">
           {/* Logo Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <img 
-              src="/logo.svg" 
-              alt="Four Gates Links Logo" 
-              className="h-20 w-auto object-contain mb-6" 
-            />
+            <Link to="/">
+              <img 
+                src="/logo.svg" 
+                alt="Four Gates Links Logo" 
+                className="h-20 w-auto object-contain mb-6 hover:opacity-85 transition-opacity" 
+              />
+            </Link>
           </div>
 
           {/* Company Links Column */}
           <div className="lg:col-span-2">
             <h3 className="text-gray-900 font-medium tracking-medium text-base mb-4">Company</h3>
             <ul className="space-y-3">
-              {['Services', 'Projects', 'About Us'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="#" 
+              {[
+                { name: 'Services', href: '/services' },
+                { name: 'Projects', href: '/projects' },
+                { name: 'About Us', href: '/about' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    to={link.href} 
                     className="text-gray-500 hover:text-[#FF5C00] text-[15px] font-regular tracking-regular transition-colors duration-200"
                   >
-                    {item}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
