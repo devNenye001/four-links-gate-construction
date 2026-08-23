@@ -134,7 +134,7 @@ export const Services: React.FC = () => {
           </p>
           
           {/* Hand off money image */}
-          <div className="max-w-md mx-auto mb-10 overflow-hidden border border-gray-100 bg-gray-50">
+          <div className="max-w-md mx-auto mb-10 overflow-hidden bg-gray-50">
             <img 
               src="/pay-small-small-pic.jpeg" 
               alt="Pay Small Small Installment Payment Plan" 

@@ -241,7 +241,7 @@ export const About: React.FC = () => {
             Whether you're starting a new project, upgrading an existing property, or looking for a path to homeownership, we provide solutions under one roof.
           </p>
           
-          <div className="max-w-md mx-auto mb-10 overflow-hidden border border-gray-100 bg-white">
+          <div className="max-w-md mx-auto mb-10 overflow-hidden bg-white">
             <img 
               src="/pay-small-small-pic.jpeg" 
               alt="Pay Small Small Installment Payment Plan" 

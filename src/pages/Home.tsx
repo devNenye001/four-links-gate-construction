@@ -334,7 +334,7 @@ export const Home: React.FC = () => {
         </p>
         
         {/* Money hand off image (Straight borders) */}
-        <div className="max-w-md mx-auto mb-10 overflow-hidden border border-gray-100">
+        <div className="max-w-md mx-auto mb-10 overflow-hidden">
           <img 
             src="/pay-small-small-pic.jpeg" 
             alt="Pay Small Small Installment Payment Plan" 
