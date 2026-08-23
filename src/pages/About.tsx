@@ -202,9 +202,9 @@ export const About: React.FC = () => {
             {serviceList.map((service, index) => (
               <div 
                 key={index} 
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gray-50/40 border border-gray-100 rounded-[32px] p-6 sm:p-8 md:p-10 transition-shadow duration-300 hover:shadow-sm"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-gray-50/40 border border-gray-100 p-5 sm:p-8 md:p-10 transition-shadow duration-300 hover:shadow-sm"
               >
-                <div className="flex flex-col items-start pr-0 md:pr-4">
+                <div className={`flex flex-col items-start pr-0 md:pr-4 ${index % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}>
                   <span className="text-[#FF5C00] font-bold text-lg mb-1 block">
                     {service.num}
                   </span>
@@ -216,7 +216,7 @@ export const About: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="w-full aspect-[16/10] md:aspect-[1.5] overflow-hidden border border-gray-100 bg-gray-100">
+                <div className={`w-full aspect-[16/10] md:aspect-[1.5] overflow-hidden border border-gray-100 bg-gray-100 ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
                   <img 
                     src={service.img} 
                     alt={service.title} 
