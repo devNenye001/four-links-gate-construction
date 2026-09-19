@@ -347,7 +347,7 @@ export const About: React.FC = () => {
               to="/projects"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
             >
-              <span>View All 35 Projects</span>
+              <span>See More</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
