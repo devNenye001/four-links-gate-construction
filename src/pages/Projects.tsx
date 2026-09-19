@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 
 export const Projects: React.FC = () => {
   const projectVideos = [
@@ -18,6 +19,41 @@ export const Projects: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="Our Projects & Work Portfolio | Four Gates Links"
+        description="Explore video documentation and showcases of our building projects, structural installations, and engineering developments across Niger State and Nigeria."
+        canonical="https://fourgateslink.com/projects"
+        keywords="construction projects minna, building portfolio nigeria, civil engineering works, niger state buildings"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          '@id': 'https://fourgateslink.com/projects#webpage',
+          url: 'https://fourgateslink.com/projects',
+          name: 'Four Gates Links Projects & Work Portfolio',
+          description: 'Showcase of construction and engineering projects completed by Four Gates Links Construction Company Nigeria Limited.',
+          isPartOf: {
+            '@id': 'https://fourgateslink.com/#website'
+          },
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://fourgateslink.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Projects',
+                item: 'https://fourgateslink.com/projects'
+              }
+            ]
+          }
+        }}
+      />
+
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 

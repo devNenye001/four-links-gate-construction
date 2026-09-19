@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 import { OrangeSlantedBoxes } from './Home';
 import { ArrowRight } from 'lucide-react';
 
@@ -47,6 +48,46 @@ export const Services: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="Engineering & Construction Services | Four Gates Links"
+        description="Explore our specialized construction services in Nigeria: building construction, structural engineering, electrical wiring, distribution switchgear, site supervision, and property renovations."
+        canonical="https://fourgateslink.com/services"
+        keywords="construction services minna, electrical installations niger state, structural engineering nigeria, site supervision, commercial renovation"
+        schema={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: serviceList.map((svc, idx) => ({
+              '@type': 'Service',
+              position: idx + 1,
+              name: svc.title,
+              description: svc.desc,
+              provider: {
+                '@id': 'https://fourgateslink.com/#organization'
+              }
+            }))
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://fourgateslink.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Services',
+                item: 'https://fourgateslink.com/services'
+              }
+            ]
+          }
+        ]}
+      />
+
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, PhoneCall, Mail } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 
 export const Contact: React.FC = () => {
   return (
@@ -12,6 +13,41 @@ export const Contact: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="Contact Us | Four Gates Links Construction Minna Office"
+        description="Contact Four Gates Links Construction Company Nigeria Limited. Visit our Minna office opposite Bahago Plaza, call 07031033348 / 07049463239, or message us on WhatsApp."
+        canonical="https://fourgateslink.com/contact"
+        keywords="contact four gates links, construction company minna phone, niger state builders contact, tunga minna civil engineering"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          '@id': 'https://fourgateslink.com/contact#webpage',
+          url: 'https://fourgateslink.com/contact',
+          name: 'Contact Four Gates Links Construction Company Nigeria Limited',
+          description: 'Contact information, office location map, phone numbers and email for Four Gates Links.',
+          isPartOf: {
+            '@id': 'https://fourgateslink.com/#website'
+          },
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://fourgateslink.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Contact',
+                item: 'https://fourgateslink.com/contact'
+              }
+            ]
+          }
+        }}
+      />
+
       {/* Hero Section Container */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
@@ -61,20 +97,28 @@ export const Contact: React.FC = () => {
             </p>
           </div>
 
-          {/* Card 2: Call Us */}
+          {/* Card 2: Call Us & WhatsApp */}
           <div className="flex flex-col items-start md:px-6 lg:px-12 md:border-r border-gray-100 last:border-0">
             <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center mb-6 border border-gray-100">
               <PhoneCall className="w-6 h-6 text-[#FF5C00]" />
             </div>
-            <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Call Us</h3>
-            <div className="flex flex-col gap-1 text-[15px] font-regular tracking-regular">
+            <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Call & WhatsApp</h3>
+            <div className="flex flex-col gap-1 text-[15px] font-regular tracking-regular mb-4">
               <a href="tel:07031033348" className="text-gray-500 hover:text-[#FF5C00] transition-colors">
-                0703 103 3348
+                +234 703 103 3348
               </a>
               <a href="tel:07049463239" className="text-gray-500 hover:text-[#FF5C00] transition-colors">
                 0704 946 3239
               </a>
             </div>
+            <a
+              href="https://wa.me/2347031033348?text=Hello%20Four%20Gates%20Links%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF5C00]/10 hover:bg-[#FF5C00] text-[#FF5C00] hover:text-white rounded-full text-[13px] font-medium transition-colors"
+            >
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
 
           {/* Card 3: Email */}

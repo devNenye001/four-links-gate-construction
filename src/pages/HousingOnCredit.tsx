@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 import { OrangeSlantedBoxes } from './Home';
 import { ArrowRight } from 'lucide-react';
 
@@ -13,6 +14,44 @@ export const HousingOnCredit: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="Housing on Credit Scheme | Flexible Home Ownership Nigeria"
+        description="Own a home or acquire land in Minna and Niger State with Four Gates Links' flexible Housing on Credit scheme. Spread payments over convenient installments."
+        canonical="https://fourgateslink.com/housing-on-credit"
+        keywords="housing on credit nigeria, pay small small house minna, installment land buy niger state, affordable housing schemes nigeria, four gates housing"
+        schema={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FinancialProduct',
+            name: 'Housing On Credit Scheme',
+            description: 'Flexible payment scheme allowing clients to acquire verified residential land and property with installment payment terms.',
+            provider: {
+              '@id': 'https://fourgateslink.com/#organization'
+            },
+            areaServed: 'Niger State, Nigeria',
+            category: 'Real Estate Financing / Installment Program'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://fourgateslink.com/'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Housing On Credit',
+                item: 'https://fourgateslink.com/housing-on-credit'
+              }
+            ]
+          }
+        ]}
+      />
+
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
@@ -95,7 +134,7 @@ export const HousingOnCredit: React.FC = () => {
               Choose an eligible plot of land and pay in manageable instalments until the agreed purchase price is fully paid.
             </p>
             <a
-              href="https://wa.me/2347049463239"
+              href="https://wa.me/2347031033348?text=Hello%20Four%20Gates%20Links%2C%20I%20would%20like%20to%20make%20enquiries%20about%20the%20Land%20on%20Credit%20scheme."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[14px] rounded-full transition-colors duration-300"
@@ -120,7 +159,7 @@ export const HousingOnCredit: React.FC = () => {
               Looking to own a home? Our scheme provides an opportunity to acquire an eligible house and spread your payments over an agreed period until the total cost is completed.
             </p>
             <a
-              href="https://wa.me/2347049463239"
+              href="https://wa.me/2347031033348?text=Hello%20Four%20Gates%20Links%2C%20I%20would%20like%20to%20make%20enquiries%20about%20the%20House%20on%20Credit%20scheme."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[14px] rounded-full transition-colors duration-300"

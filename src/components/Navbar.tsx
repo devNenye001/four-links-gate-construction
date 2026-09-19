@@ -81,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
         {/* Desktop CTA Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="https://wa.me/2347049463239"
+            href="https://wa.me/2347031033348"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-7 py-3.5 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 );
               })}
               <a
-                href="https://wa.me/2347049463239"
+                href="https://wa.me/2347031033348"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

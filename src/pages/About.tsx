@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 import { OrangeSlantedBoxes, ScrollRevealText } from './Home';
 import { 
   Send,
@@ -48,8 +49,7 @@ export const About: React.FC = () => {
     }
   ];
 
-  const teamList = [
-    { name: "Alh. Mustapha Bello", role: "Founder & Managing Director", img: "/team-member1.png" },
+  const executiveTeamList = [
     { name: "Engr. Mustapha Musa", role: "Director of Technical Operations", img: "/team-member2.png" },
     { name: "Mal. Abubakar Umar", role: "Chief Surveyor", img: "/team-member3.png" },
     { name: "Arch. Ibrahim Yusuf", role: "Principal Architect", img: "/team-member4.png" },
@@ -65,6 +65,61 @@ export const About: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="About Us & CEO Profile | Four Gates Links Construction Company Nigeria Limited"
+        description="Meet Alh. Mustapha Bello, Founder & CEO of Four Gates Links Construction Company Nigeria Limited. Discover our leadership, mission, and infrastructure achievements across Nigeria."
+        canonical="https://fourgateslink.com/about"
+        keywords="ceo of four gates links construction, alh mustapha bello, mustapha bello four gates links, managing director four gates links, construction engineers minna, building contractors niger state"
+        schema={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            '@id': 'https://fourgateslink.com/about#webpage',
+            url: 'https://fourgateslink.com/about',
+            name: 'About Four Gates Links & CEO Alh. Mustapha Bello',
+            description: 'Company background, leadership profile of CEO Alh. Mustapha Bello, and engineering team at Four Gates Links Construction Company Nigeria Limited.',
+            isPartOf: {
+              '@id': 'https://fourgateslink.com/#website'
+            },
+            breadcrumb: {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://fourgateslink.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'About Us',
+                  item: 'https://fourgateslink.com/about'
+                }
+              ]
+            }
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://fourgateslink.com/about#ceo',
+            name: 'Alh. Mustapha Bello',
+            alternateName: ['Mustapha Bello', 'Alhaji Mustapha Bello', 'CEO Four Gates Links'],
+            jobTitle: 'Founder, Chief Executive Officer (CEO) & Managing Director',
+            worksFor: {
+              '@type': 'Organization',
+              name: 'FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED',
+              url: 'https://fourgateslink.com'
+            },
+            image: 'https://fourgateslink.com/team-member1.png',
+            description: 'Alh. Mustapha Bello is the Founder, Chief Executive Officer (CEO) and Managing Director of Four Gates Links Construction Company Nigeria Limited, leading infrastructure development, civil engineering, and housing solutions across Niger State and Nigeria.',
+            sameAs: [
+              'https://fourgateslink.com/about'
+            ]
+          }
+        ]}
+      />
+
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
@@ -292,7 +347,68 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. Our Team Section */}
+      {/* 7. Founder & CEO Profile Section */}
+      <section className="py-20 md:py-24 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          {/* Section Header */}
+          <div className="text-center mb-14 flex flex-col items-center">
+            <div className="flex items-center mb-4">
+              <OrangeSlantedBoxes />
+              <span className="text-[#FF5C00] font-medium tracking-medium text-sm uppercase">Executive Leadership</span>
+            </div>
+            <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">Meet Our Founder & CEO</h2>
+          </div>
+
+          {/* CEO Card Layout */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center bg-gray-50/50 p-6 sm:p-10 lg:p-12 border border-gray-100"
+          >
+            {/* CEO Picture */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="w-full max-w-sm aspect-[4/5] overflow-hidden border border-gray-200 bg-white shadow-sm">
+                <img 
+                  src="/team-member1.png" 
+                  alt="Alh. Mustapha Bello - Founder, CEO and Managing Director of Four Gates Links Construction Company Nigeria Limited" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-gray-900 font-medium tracking-medium text-lg">Alh. Mustapha Bello</h3>
+                <p className="text-[#FF5C00] font-medium text-sm">Founder & Chief Executive Officer (CEO)</p>
+              </div>
+            </div>
+
+            {/* CEO Bio & Description */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left">
+              <h3 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-4">
+                Alh. Mustapha Bello
+              </h3>
+              <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-4">
+                <strong>Alh. Mustapha Bello</strong> is the Founder, Chief Executive Officer (CEO), and Managing Director of <strong>FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED</strong>. With a visionary commitment to raising the bar for architectural precision and structural integrity, he has guided the company into a renowned construction, civil engineering, and property development brand headquartered in Minna, Niger State.
+              </p>
+              <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-6">
+                Under his leadership, Four Gates Links has successfully delivered major building construction, electrical installations, and project management contracts across Nigeria. Championing inclusive growth and practical real estate solutions, Alh. Mustapha Bello also spearheaded the company's flagship <em>Housing on Credit</em> scheme, making verified land and home acquisition achievable through flexible installment plans.
+              </p>
+
+              {/* Quote block */}
+              <div className="w-full p-4 sm:p-5 bg-white border-l-4 border-[#FF5C00] shadow-sm">
+                <p className="text-gray-700 italic text-[14px] sm:text-[15px] leading-relaxed">
+                  "Our core mission at Four Gates Links is to build structures that stand the test of time, while making homeownership an accessible reality through honesty, disciplined execution, and unyielding quality."
+                </p>
+                <span className="block mt-2 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  — Alh. Mustapha Bello, Managing Director & CEO
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 8. Our Team Section (The People Behind the Brand) */}
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16 flex flex-col items-center">
@@ -303,8 +419,8 @@ export const About: React.FC = () => {
             <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">The People Behind the Brand</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamList.map((member, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+            {executiveTeamList.map((member, index) => (
               <motion.div 
                 key={index} 
                 initial={{ opacity: 0, y: 35 }}
@@ -313,15 +429,15 @@ export const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-full aspect-[4/5] overflow-hidden border border-gray-100 mb-5 bg-gray-50">
+                <div className="w-full aspect-[4/5] overflow-hidden border border-gray-100 mb-4 bg-gray-50">
                   <img 
                     src={member.img} 
-                    alt={member.name} 
+                    alt={`${member.name} - ${member.role} at Four Gates Links Construction Company Nigeria Limited`} 
                     className="w-full h-full object-cover" 
                   />
                 </div>
-                <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-1">{member.name}</h3>
-                <p className="text-gray-500 font-regular tracking-regular text-[14px]">{member.role}</p>
+                <h3 className="text-gray-900 font-medium tracking-medium text-base mb-1">{member.name}</h3>
+                <p className="text-gray-500 font-regular tracking-regular text-[13px]">{member.role}</p>
               </motion.div>
             ))}
           </div>

@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
 export const NotFound: React.FC = () => {
   return (
     <div className="w-full flex-grow flex flex-col items-center justify-center py-20 px-6 sm:px-8 text-center bg-white">
+      <SEO 
+        title="404 - Page Not Found | Four Gates Links"
+        description="The page you are looking for does not exist on Four Gates Links Construction Company Nigeria Limited."
+        canonical="https://fourgateslink.com/404"
+      />
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

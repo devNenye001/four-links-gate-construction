@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
                   Join us today, lets build your dream.
                 </p>
                 <a
-                  href="https://wa.me/2347049463239"
+                  href="https://wa.me/2347031033348"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#FF5C00] hover:bg-gray-50 font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"

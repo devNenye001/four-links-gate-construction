@@ -13,6 +13,7 @@ import {
   Home as HomeIcon
 } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
+import { SEO } from '../components/SEO';
 
 // 2 Orange Slanted Boxy Stuff (rhombus/skewed badge icon) next to section tags
 export const OrangeSlantedBoxes: React.FC = () => {
@@ -173,6 +174,24 @@ export const Home: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="w-full min-h-screen bg-white flex flex-col"
     >
+      <SEO 
+        title="Four Gates Links Construction Company Nigeria Limited | Minna, Niger State"
+        description="Leading construction and civil engineering firm in Minna, Niger State. We deliver building construction, structural works, electrical installations, project management, and flexible housing on credit schemes."
+        canonical="https://fourgateslink.com/"
+        keywords="Four Gates Links, fourgateslink, construction company minna, civil engineering niger state, building construction nigeria, housing on credit, electrical wiring minna, project management nigeria, real estate minna"
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          '@id': 'https://fourgateslink.com/#website',
+          url: 'https://fourgateslink.com/',
+          name: 'Four Gates Links Construction Company Nigeria Limited',
+          description: 'Official website of Four Gates Links Construction Company Nigeria Limited',
+          publisher: {
+            '@id': 'https://fourgateslink.com/#organization'
+          }
+        }}
+      />
+
       {/* 1. Hero Section */}
       <div className="relative w-full h-[580px] md:h-[650px] bg-cover bg-center overflow-hidden flex flex-col justify-between" style={{ backgroundImage: "url('/hero-bg.jpg')" }}>
         <div className="absolute inset-0 bg-black/60 z-0" />
