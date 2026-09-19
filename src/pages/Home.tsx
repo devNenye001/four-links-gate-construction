@@ -118,7 +118,7 @@ interface HoverVideoProps {
 
 const HoverVideo: React.FC<HoverVideoProps> = ({ src, poster }) => {
   return (
-    <div className="relative aspect-[3/4] overflow-hidden border border-gray-100 bg-gray-50 group">
+    <div className="relative aspect-[3/4] overflow-hidden border border-gray-100 bg-gray-50">
       <video
         src={src}
         poster={poster}

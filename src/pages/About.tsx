@@ -330,13 +330,13 @@ export const About: React.FC = () => {
             {["/g1.jpeg", "/g2.jpeg", "/g3.jpeg", "/g4.jpeg", "/g5.jpeg", "/g6.jpeg"].map((imgSrc, idx) => (
               <div 
                 key={idx} 
-                className="relative aspect-[4/3] overflow-hidden border border-gray-100 bg-gray-50 group shadow-sm"
+                className="relative aspect-[4/3] overflow-hidden border border-gray-100 bg-gray-50 shadow-sm"
               >
                 <img
                   src={imgSrc}
                   alt={`Four Gates Links Construction Project Preview ${idx + 1}`}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}

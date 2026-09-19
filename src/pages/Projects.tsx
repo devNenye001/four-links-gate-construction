@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { SEO } from '../components/SEO';
-import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   // All 35 project images from g1.jpeg to g35.jpeg
@@ -133,28 +133,14 @@ export const Projects: React.FC = () => {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: (index % 8) * 0.05 }}
                 onClick={() => setActiveImageIndex(index)}
-                className="group relative aspect-[4/3] overflow-hidden border border-gray-100 bg-gray-100 cursor-pointer shadow-sm hover:shadow-md transition-all duration-300"
+                className="relative aspect-[4/3] overflow-hidden border border-gray-100 bg-gray-100 cursor-pointer shadow-sm"
               >
-                {/* Image */}
                 <img
                   src={imgSrc}
                   alt={`Four Gates Links Construction Project Photo ${index + 1}`}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108"
+                  className="w-full h-full object-cover"
                 />
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 text-white">
-                  <div className="self-end">
-                    <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
-                      <ZoomIn className="w-4 h-4 text-white" />
-                    </span>
-                  </div>
-                  <div className="text-left">
-                    <span className="text-xs uppercase tracking-wider font-medium text-white/80">Project {index + 1}</span>
-                    <p className="text-sm font-medium">Four Gates Links</p>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
