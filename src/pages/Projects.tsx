@@ -5,6 +5,9 @@ import { SEO } from '../components/SEO';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {
+  // All 13 project videos from m1.mp4 to m13.mp4
+  const projectVideos = Array.from({ length: 13 }, (_, i) => `/m${i + 1}.mp4`);
+
   // All 35 project images from g1.jpeg to g35.jpeg
   const projectImages = Array.from({ length: 35 }, (_, i) => `/g${i + 1}.jpeg`);
 
@@ -51,14 +54,14 @@ export const Projects: React.FC = () => {
         title="Our Projects & Work Portfolio | Four Gates Links"
         description="Explore our completed and ongoing building construction, civil engineering, and infrastructure projects across Niger State and Nigeria."
         canonical="https://fourgateslink.com/projects"
-        keywords="construction projects minna, building portfolio nigeria, civil engineering works, niger state buildings, four gates links gallery"
+        keywords="construction projects minna, building portfolio nigeria, civil engineering works, niger state buildings, four gates links gallery, site videos"
         schema={{
           '@context': 'https://schema.org',
           '@type': 'ImageGallery',
           '@id': 'https://fourgateslink.com/projects#gallery',
           url: 'https://fourgateslink.com/projects',
           name: 'Four Gates Links Projects & Work Portfolio',
-          description: '35 project showcase images of construction, structural engineering, and infrastructure delivered by Four Gates Links Construction Company Nigeria Limited.',
+          description: 'Showcase of construction, structural engineering, and infrastructure delivered by Four Gates Links Construction Company Nigeria Limited.',
           isPartOf: {
             '@id': 'https://fourgateslink.com/#website'
           },
@@ -98,7 +101,7 @@ export const Projects: React.FC = () => {
             Built With Purpose. Made to Last.
           </h1>
           <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto font-regular tracking-regular leading-relaxed">
-            Explore our complete project photo showcase reflecting our commitment to quality construction, structural integrity, and lasting value across Nigeria.
+            Explore our complete project documentation reflecting our commitment to quality construction, structural integrity, and lasting value across Nigeria.
           </p>
         </div>
 
@@ -113,13 +116,46 @@ export const Projects: React.FC = () => {
       {/* Spacer */}
       <div className="h-12 w-full bg-white relative z-10" />
 
-      {/* 2. Photo Gallery Showcase Section */}
-      <section className="py-12 md:py-16 w-full bg-white">
+      {/* 2. On-Site Videos Section (m1.mp4 to m13.mp4) */}
+      <section className="py-12 md:py-16 w-full bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* Main Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl md:text-[32px] leading-tight">
               See What We're Building.
+            </h2>
+          </div>
+
+          {/* 13 Videos Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {projectVideos.map((videoSrc, index) => (
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: (index % 6) * 0.08 }}
+                className="relative aspect-[3/4] overflow-hidden border border-gray-100 bg-gray-50 shadow-sm"
+              >
+                <video
+                  src={videoSrc}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Photo Gallery Showcase Section (g1.jpeg to g35.jpeg) */}
+      <section className="py-16 md:py-20 w-full bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl md:text-[32px] leading-tight">
+              Project Photo Gallery
             </h2>
           </div>
 

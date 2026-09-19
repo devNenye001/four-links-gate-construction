@@ -377,7 +377,7 @@ export const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20 md:pb-28 w-full">
         <div className="relative w-full aspect-video overflow-hidden bg-black border border-gray-100">
           <video
-            src="/projects1.mp4"
+            src="/m1.mp4"
             autoPlay
             muted
             loop
@@ -473,9 +473,9 @@ export const Home: React.FC = () => {
 
           {/* Autoplay Project Grid (Straight borders) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <HoverVideo src="/projects1.mp4" />
-            <HoverVideo src="/projects2.mp4" />
-            <HoverVideo src="/projects3.mp4" />
+            <HoverVideo src="/m1.mp4" />
+            <HoverVideo src="/m3.mp4" />
+            <HoverVideo src="/m7.mp4" />
           </div>
         </div>
       </section>

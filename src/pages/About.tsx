@@ -50,11 +50,10 @@ export const About: React.FC = () => {
   ];
 
   const executiveTeamList = [
-    { name: "Engr. Mustapha Musa", role: "Director of Technical Operations", img: "/team-member2.png" },
-    { name: "Mal. Abubakar Umar", role: "Chief Surveyor", img: "/team-member3.png" },
-    { name: "Arch. Ibrahim Yusuf", role: "Principal Architect", img: "/team-member4.png" },
-    { name: "QS. Amina Dahiru", role: "Lead Quantity Surveyor", img: "/team-member5.png" },
-    { name: "Barr. Aisha Mohammed", role: "Legal & Compliance", img: "/team-member6.png" }
+    { name: "Mr. Fan", role: "Project Manager", img: "/mr-fan.jpeg" },
+    { name: "Mr. Yang", role: "Head of Accounting Unit", img: "/mr-yang.jpeg" },
+    { name: "Muhammad Bulus", role: "Head of Engineering Department", img: "/bulus.jpeg" },
+    { name: "Project Supervisors", role: "Site & Technical Supervision Team", img: "/supervisors.jpeg" }
   ];
 
   return (
@@ -428,7 +427,7 @@ export const About: React.FC = () => {
             <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">The People Behind the Brand</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {executiveTeamList.map((member, index) => (
               <motion.div 
                 key={index} 
