@@ -326,23 +326,30 @@ export const About: React.FC = () => {
             <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">See What We're Building</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {["/projects1.mp4", "/projects2.mp4", "/projects3.mp4"].map((videoSrc, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {["/g1.jpeg", "/g2.jpeg", "/g3.jpeg", "/g4.jpeg", "/g5.jpeg", "/g6.jpeg"].map((imgSrc, idx) => (
               <div 
                 key={idx} 
-                className="relative aspect-[3/4] overflow-hidden border border-gray-100 bg-gray-50"
+                className="relative aspect-[4/3] overflow-hidden border border-gray-100 bg-gray-50 group shadow-sm"
               >
-                <video
-                  src={videoSrc}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls
-                  className="w-full h-full object-cover"
+                <img
+                  src={imgSrc}
+                  alt={`Four Gates Links Construction Project Preview ${idx + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#FF5C00] hover:bg-[#E05200] text-white font-medium tracking-medium text-[15px] rounded-full transition-colors duration-300"
+            >
+              <span>View All 35 Projects</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
