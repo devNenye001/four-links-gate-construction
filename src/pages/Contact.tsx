@@ -97,28 +97,20 @@ export const Contact: React.FC = () => {
             </p>
           </div>
 
-          {/* Card 2: Call Us & WhatsApp */}
+          {/* Card 2: Call Us */}
           <div className="flex flex-col items-start md:px-6 lg:px-12 md:border-r border-gray-100 last:border-0">
             <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center mb-6 border border-gray-100">
               <PhoneCall className="w-6 h-6 text-[#FF5C00]" />
             </div>
-            <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Call & WhatsApp</h3>
-            <div className="flex flex-col gap-1 text-[15px] font-regular tracking-regular mb-4">
+            <h3 className="text-gray-900 font-medium tracking-medium text-lg mb-3">Call Us</h3>
+            <div className="flex flex-col gap-1 text-[15px] font-regular tracking-regular">
               <a href="tel:07031033348" className="text-gray-500 hover:text-[#FF5C00] transition-colors">
-                +234 703 103 3348
+                0703 103 3348
               </a>
               <a href="tel:07049463239" className="text-gray-500 hover:text-[#FF5C00] transition-colors">
                 0704 946 3239
               </a>
             </div>
-            <a
-              href="https://wa.me/2347031033348?text=Hello%20Four%20Gates%20Links%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF5C00]/10 hover:bg-[#FF5C00] text-[#FF5C00] hover:text-white rounded-full text-[13px] font-medium transition-colors"
-            >
-              <span>Chat on WhatsApp</span>
-            </a>
           </div>
 
           {/* Card 3: Email */}

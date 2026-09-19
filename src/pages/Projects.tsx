@@ -116,17 +116,11 @@ export const Projects: React.FC = () => {
       {/* 2. Photo Gallery Showcase Section */}
       <section className="py-12 md:py-16 w-full bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* Main Section Header & Project Counter */}
-          <div className="text-center mb-12 flex flex-col items-center">
-            <span className="inline-block px-4 py-1.5 bg-[#FF5C00]/10 text-[#FF5C00] text-xs sm:text-sm uppercase tracking-wider font-semibold rounded-full mb-3">
-              Project Portfolio • 35 Photos
-            </span>
-            <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl md:text-[32px] leading-tight mb-3">
+          {/* Main Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl md:text-[32px] leading-tight">
               See What We're Building.
             </h2>
-            <p className="text-gray-500 font-regular text-sm sm:text-base max-w-xl">
-              Click any project image to expand and view in high resolution.
-            </p>
           </div>
 
           {/* 35 Images Responsive Grid */}
