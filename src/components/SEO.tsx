@@ -129,9 +129,10 @@ export const SEO: React.FC<SEOProps> = ({
       ],
       founder: {
         '@type': 'Person',
-        name: 'Alh. Mustapha Bello',
-        jobTitle: 'Founder, Chief Executive Officer (CEO) & Managing Director',
-        image: 'https://fourgateslink.com/team-member1.png',
+        name: 'Francis Onochie Okolie Nzube',
+        alternateName: ['Francis Okolie', 'Francis Onochie Okolie', 'Francis Nzube', 'CEO Four Gates Links'],
+        jobTitle: 'Founder and Director',
+        image: 'https://fourgateslink.com/ceo.jpeg',
         url: 'https://fourgateslink.com/about'
       },
       knowsAbout: [

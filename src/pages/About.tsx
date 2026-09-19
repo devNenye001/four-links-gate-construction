@@ -66,18 +66,18 @@ export const About: React.FC = () => {
       className="w-full min-h-screen bg-white flex flex-col"
     >
       <SEO 
-        title="About Us & CEO Profile | Four Gates Links Construction Company Nigeria Limited"
-        description="Meet Alh. Mustapha Bello, Founder & CEO of Four Gates Links Construction Company Nigeria Limited. Discover our leadership, mission, and infrastructure achievements across Nigeria."
+        title="About Us & Leadership | Four Gates Links Construction Company Nigeria Limited"
+        description="Meet Francis Onochie Okolie Nzube, Founder & Director of Four Gates Links Construction Company Nigeria Limited. Discover our leadership, mission, and infrastructure achievements across Nigeria."
         canonical="https://fourgateslink.com/about"
-        keywords="ceo of four gates links construction, alh mustapha bello, mustapha bello four gates links, managing director four gates links, construction engineers minna, building contractors niger state"
+        keywords="Francis Onochie Okolie Nzube, Francis Okolie, Francis Onochie Okolie, ceo of four gates links construction, founder four gates links, managing director four gates links, Care for Care Foundation, construction engineers minna, building contractors niger state"
         schema={[
           {
             '@context': 'https://schema.org',
             '@type': 'AboutPage',
             '@id': 'https://fourgateslink.com/about#webpage',
             url: 'https://fourgateslink.com/about',
-            name: 'About Four Gates Links & CEO Alh. Mustapha Bello',
-            description: 'Company background, leadership profile of CEO Alh. Mustapha Bello, and engineering team at Four Gates Links Construction Company Nigeria Limited.',
+            name: 'About Four Gates Links & Founder Francis Onochie Okolie Nzube',
+            description: 'Company background, leadership profile of Founder and Director Francis Onochie Okolie Nzube, and engineering team at Four Gates Links Construction Company Nigeria Limited.',
             isPartOf: {
               '@id': 'https://fourgateslink.com/#website'
             },
@@ -103,16 +103,16 @@ export const About: React.FC = () => {
             '@context': 'https://schema.org',
             '@type': 'Person',
             '@id': 'https://fourgateslink.com/about#ceo',
-            name: 'Alh. Mustapha Bello',
-            alternateName: ['Mustapha Bello', 'Alhaji Mustapha Bello', 'CEO Four Gates Links'],
-            jobTitle: 'Founder, Chief Executive Officer (CEO) & Managing Director',
+            name: 'Francis Onochie Okolie Nzube',
+            alternateName: ['Francis Okolie', 'Francis Onochie Okolie', 'Francis Nzube', 'CEO Four Gates Links', 'Founder Four Gates Links'],
+            jobTitle: 'Founder and Director',
             worksFor: {
               '@type': 'Organization',
               name: 'FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED',
               url: 'https://fourgateslink.com'
             },
-            image: 'https://fourgateslink.com/team-member1.png',
-            description: 'Alh. Mustapha Bello is the Founder, Chief Executive Officer (CEO) and Managing Director of Four Gates Links Construction Company Nigeria Limited, leading infrastructure development, civil engineering, and housing solutions across Niger State and Nigeria.',
+            image: 'https://fourgateslink.com/ceo.jpeg',
+            description: 'Francis Onochie Okolie Nzube is a Nigerian entrepreneur, construction professional, and business leader, and the Founder and Director of Four Gates Links Construction Company Nigeria Limited.',
             sameAs: [
               'https://fourgateslink.com/about'
             ]
@@ -363,7 +363,7 @@ export const About: React.FC = () => {
               <OrangeSlantedBoxes />
               <span className="text-[#FF5C00] font-medium tracking-medium text-sm uppercase">Executive Leadership</span>
             </div>
-            <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">Meet Our Founder & CEO</h2>
+            <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">Meet Our Founder & Director</h2>
           </div>
 
           {/* CEO Card Layout */}
@@ -374,41 +374,43 @@ export const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center bg-gray-50/50 p-6 sm:p-10 lg:p-12 border border-gray-100"
           >
-            {/* CEO Picture */}
+            {/* CEO Picture (No repeated name underneath) */}
             <div className="lg:col-span-5 flex flex-col items-center">
               <div className="w-full max-w-sm aspect-[4/5] overflow-hidden border border-gray-200 bg-white shadow-sm">
                 <img 
-                  src="/team-member1.png" 
-                  alt="Alh. Mustapha Bello - Founder, CEO and Managing Director of Four Gates Links Construction Company Nigeria Limited" 
+                  src="/ceo.jpeg" 
+                  alt="Francis Onochie Okolie Nzube - Founder and Director of Four Gates Links Construction Company Nigeria Limited" 
                   className="w-full h-full object-cover object-top"
                 />
-              </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-gray-900 font-medium tracking-medium text-lg">Alh. Mustapha Bello</h3>
-                <p className="text-[#FF5C00] font-medium text-sm">Founder & Chief Executive Officer (CEO)</p>
               </div>
             </div>
 
             {/* CEO Bio & Description */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <h3 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-4">
-                Alh. Mustapha Bello
+              <h3 className="text-gray-900 font-medium tracking-medium text-2xl sm:text-3xl mb-1">
+                Francis Onochie Okolie Nzube
               </h3>
+              <span className="text-[#FF5C00] text-sm uppercase tracking-wider font-semibold block mb-4">
+                Founder & Director
+              </span>
+              
               <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-4">
-                <strong>Alh. Mustapha Bello</strong> is the Founder, Chief Executive Officer (CEO), and Managing Director of <strong>FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED</strong>. With a visionary commitment to raising the bar for architectural precision and structural integrity, he has guided the company into a renowned construction, civil engineering, and property development brand headquartered in Minna, Niger State.
+                <strong>Francis Onochie Okolie Nzube</strong> is a Nigerian entrepreneur, construction professional, and business leader with experience in construction, project management, real estate, business development, and engineering-related services across Nigeria and other African countries.
               </p>
-              <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-6">
-                Under his leadership, Four Gates Links has successfully delivered major building construction, electrical installations, and project management contracts across Nigeria. Championing inclusive growth and practical real estate solutions, Alh. Mustapha Bello also spearheaded the company's flagship <em>Housing on Credit</em> scheme, making verified land and home acquisition achievable through flexible installment plans.
+              
+              <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-4">
+                He is the <strong>Founder and Director of Four Gates Links Construction Company Nigeria Limited</strong>, based in Minna, Niger State, where he oversees building construction, structural works, electrical installations, project management, renovation, maintenance, and real estate services.
               </p>
 
-              {/* Quote block */}
+              <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-6">
+                Beyond construction, Francis is passionate about innovative housing solutions, entrepreneurship, and community development. He is also the founder of <strong>Care for Care Foundation</strong>, an initiative focused on supporting vulnerable individuals and contributing to community development.
+              </p>
+
+              {/* Commitment quote/statement block */}
               <div className="w-full p-4 sm:p-5 bg-white border-l-4 border-[#FF5C00] shadow-sm">
                 <p className="text-gray-700 italic text-[14px] sm:text-[15px] leading-relaxed">
-                  "Our core mission at Four Gates Links is to build structures that stand the test of time, while making homeownership an accessible reality through honesty, disciplined execution, and unyielding quality."
+                  "With a strong commitment to integrity, innovation, professional excellence, and service, Francis aims to build businesses, create opportunities, develop communities, and contribute to sustainable economic and social development in Nigeria and Africa."
                 </p>
-                <span className="block mt-2 text-xs font-medium text-gray-400 uppercase tracking-wider">
-                  — Alh. Mustapha Bello, Managing Director & CEO
-                </span>
               </div>
             </div>
           </motion.div>
