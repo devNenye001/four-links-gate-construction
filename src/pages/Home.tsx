@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Building, 
@@ -25,19 +25,28 @@ export const OrangeSlantedBoxes: React.FC = () => {
   );
 };
 
+const typingWords = ['Construction', 'Engineering', 'Real Estate'];
+
 // Custom Typing animation cycling through divisions
 export const TypingText: React.FC = () => {
-  const words = ["Construction", "Engineering", "Real Estate"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    const activeWord = words[currentWordIndex];
+    const activeWord = typingWords[currentWordIndex];
     let timer: number;
 
-    if (isDeleting) {
+    if (!isDeleting && currentText === activeWord) {
+      timer = window.setTimeout(() => setIsDeleting(true), 1500);
+    } else if (isDeleting && currentText === '') {
+      timer = window.setTimeout(() => {
+        setIsDeleting(false);
+        setCurrentWordIndex((previousIndex) => (previousIndex + 1) % typingWords.length);
+        setTypingSpeed(200);
+      }, typingSpeed);
+    } else if (isDeleting) {
       timer = window.setTimeout(() => {
         setCurrentText(activeWord.substring(0, currentText.length - 1));
         setTypingSpeed(75);
@@ -49,18 +58,8 @@ export const TypingText: React.FC = () => {
       }, typingSpeed);
     }
 
-    if (!isDeleting && currentText === activeWord) {
-      timer = window.setTimeout(() => {
-        setIsDeleting(true);
-      }, 1500);
-    } else if (isDeleting && currentText === "") {
-      setIsDeleting(false);
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
-      setTypingSpeed(200);
-    }
-
     return () => clearTimeout(timer);
-  }, [currentText, isDeleting, currentWordIndex]);
+  }, [currentText, currentWordIndex, isDeleting, typingSpeed]);
 
   return (
     <span className="text-[#FF5C00] border-r-2 border-[#FF5C00] pr-1 font-medium select-text">
@@ -74,6 +73,29 @@ interface ScrollRevealProps {
   text: string;
 }
 
+interface RevealWordProps {
+  word: string;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+}
+
+const RevealWord: React.FC<RevealWordProps> = ({ word, index, total, scrollYProgress }) => {
+  const start = index / total;
+  const end = (index + 1.5) / total;
+  const color = useTransform(
+    scrollYProgress,
+    [Math.min(start, 0.9), Math.min(end, 1.0)],
+    ['#D1D5DB', '#111827']
+  );
+
+  return (
+    <motion.span style={{ color }} className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-medium select-text">
+      {word}
+    </motion.span>
+  );
+};
+
 export const ScrollRevealText: React.FC<ScrollRevealProps> = ({ text }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -85,27 +107,15 @@ export const ScrollRevealText: React.FC<ScrollRevealProps> = ({ text }) => {
 
   return (
     <div ref={elementRef} className="max-w-4xl mx-auto flex flex-wrap justify-center gap-x-2 gap-y-1 md:gap-y-2 px-4 leading-tight sm:leading-snug md:leading-normal text-center">
-      {words.map((word, index) => {
-        const start = index / words.length;
-        const end = (index + 1.5) / words.length;
-        
-        // Dynamically transition word color from light-grey (unrevealed) to dark-grey/black (revealed) on scroll
-        const color = useTransform(
-          scrollYProgress,
-          [Math.min(start, 0.9), Math.min(end, 1.0)],
-          ["#D1D5DB", "#111827"]
-        );
-
-        return (
-          <motion.span 
-            key={index} 
-            style={{ color }}
-            className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-medium select-text"
-          >
-            {word}
-          </motion.span>
-        );
-      })}
+      {words.map((word, index) => (
+        <RevealWord
+          key={`${word}-${index}`}
+          word={word}
+          index={index}
+          total={words.length}
+          scrollYProgress={scrollYProgress}
+        />
+      ))}
     </div>
   );
 };
@@ -178,6 +188,7 @@ export const Home: React.FC = () => {
         title="Four Gates Links Construction Company Nigeria Limited | Minna, Niger State"
         description="Leading construction and civil engineering firm in Minna, Niger State. We deliver building construction, structural works, electrical installations, project management, and flexible housing on credit schemes."
         canonical="https://fourgateslink.com/"
+        ogImage="https://fourgateslink.com/g5.jpeg"
         keywords="Four Gates Links, fourgateslink, construction company minna, civil engineering niger state, building construction nigeria, housing on credit, electrical wiring minna, project management nigeria, real estate minna"
         schema={{
           '@context': 'https://schema.org',
@@ -193,7 +204,7 @@ export const Home: React.FC = () => {
       />
 
       {/* 1. Hero Section */}
-      <div className="relative w-full h-[580px] md:h-[650px] bg-cover bg-center overflow-hidden flex flex-col justify-between" style={{ backgroundImage: "url('/hero-bg.jpg')" }}>
+      <div className="relative w-full h-[580px] md:h-[650px] bg-cover bg-center overflow-hidden flex flex-col justify-between" style={{ backgroundImage: "url('/g5.jpeg')" }}>
         <div className="absolute inset-0 bg-black/60 z-0" />
 
         {/* Absolute transparent header overlay */}
@@ -514,7 +525,7 @@ export const Home: React.FC = () => {
           {/* Right Image (Height reduced, aligned with steps, straight borders) */}
           <div className="h-[400px] md:h-[480px] w-full overflow-hidden border border-gray-100">
             <img 
-              src="/process-section-picture.jpg" 
+              src="/mr-fan.jpeg"
               alt="Four Gates Links Construction Site Process" 
               className="w-full h-full object-cover"
             />

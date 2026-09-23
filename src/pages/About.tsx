@@ -66,8 +66,9 @@ export const About: React.FC = () => {
     >
       <SEO 
         title="About Us & Leadership | Four Gates Links Construction Company Nigeria Limited"
-        description="Meet Francis Onochie Okolie Nzube, Founder & Director of Four Gates Links Construction Company Nigeria Limited. Discover our leadership, mission, and infrastructure achievements across Nigeria."
+        description="Meet Francis Onochie Okolie Nzube, CEO, Founder and Director of Four Gates Links Construction Company Nigeria Limited, and Mr. Fan, our Project Manager. Discover our leadership and infrastructure work across Nigeria."
         canonical="https://fourgateslink.com/about"
+        ogImage="https://fourgateslink.com/g1.jpeg"
         keywords="Francis Onochie Okolie Nzube, Francis Okolie, Francis Onochie Okolie, ceo of four gates links construction, founder four gates links, managing director four gates links, Care for Care Foundation, construction engineers minna, building contractors niger state"
         schema={[
           {
@@ -104,7 +105,7 @@ export const About: React.FC = () => {
             '@id': 'https://fourgateslink.com/about#ceo',
             name: 'Francis Onochie Okolie Nzube',
             alternateName: ['Francis Okolie', 'Francis Onochie Okolie', 'Francis Nzube', 'CEO Four Gates Links', 'Founder Four Gates Links'],
-            jobTitle: 'Founder and Director',
+            jobTitle: 'CEO, Founder and Director',
             worksFor: {
               '@type': 'Organization',
               name: 'FOUR GATES LINKS CONSTRUCTION COMPANY NIGERIA LIMITED',
@@ -115,6 +116,50 @@ export const About: React.FC = () => {
             sameAs: [
               'https://fourgateslink.com/about'
             ]
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://fourgateslink.com/about#project-manager',
+            name: 'Mr. Fan',
+            jobTitle: 'Project Manager',
+            image: 'https://fourgateslink.com/mr-fan.jpeg',
+            worksFor: {
+              '@id': 'https://fourgateslink.com/#organization'
+            },
+            url: 'https://fourgateslink.com/about',
+            description: 'Mr. Fan is the Project Manager at Four Gates Links Construction Company Nigeria Limited.'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            '@id': 'https://fourgateslink.com/about#leadership-faq',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Who is the CEO of Four Gates Links?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Francis Onochie Okolie Nzube is the CEO, Founder and Director of Four Gates Links Construction Company Nigeria Limited.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Who is the Project Manager at Four Gates Links?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Mr. Fan is the Project Manager at Four Gates Links Construction Company Nigeria Limited.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'What does Four Gates Links do?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Four Gates Links provides building construction, structural works, electrical installations, project management, site supervision, renovation, maintenance and housing-on-credit solutions in Minna, Niger State and across Nigeria.'
+                }
+              }
+            ]
           }
         ]}
       />
@@ -122,7 +167,7 @@ export const About: React.FC = () => {
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
-        style={{ backgroundImage: "url('/about-page-banner.jpg')" }}
+        style={{ backgroundImage: "url('/g1.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
 
@@ -193,7 +238,7 @@ export const About: React.FC = () => {
           {/* Team group photo */}
           <div className="w-full overflow-hidden border border-gray-100 shadow-sm bg-gray-50">
             <img 
-              src="/about-page-picture.png" 
+              src="/g14.jpeg"
               alt="Four Gates Links Construction Team Group Photo" 
               className="w-full h-auto max-h-[480px] object-cover"
             />
@@ -362,7 +407,7 @@ export const About: React.FC = () => {
               <OrangeSlantedBoxes />
               <span className="text-[#FF5C00] font-medium tracking-medium text-sm uppercase">Executive Leadership</span>
             </div>
-            <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">Meet Our Founder & Director</h2>
+            <h2 className="text-gray-900 font-medium tracking-medium text-3xl sm:text-4xl">Meet Our CEO, Founder & Director</h2>
           </div>
 
           {/* CEO Card Layout */}
@@ -390,7 +435,7 @@ export const About: React.FC = () => {
                 Francis Onochie Okolie Nzube
               </h3>
               <span className="text-[#FF5C00] text-sm uppercase tracking-wider font-semibold block mb-4">
-                Founder & Director
+                CEO, Founder & Director
               </span>
               
               <p className="text-gray-600 font-regular tracking-regular text-[15px] sm:text-base leading-relaxed mb-4">
@@ -448,6 +493,28 @@ export const About: React.FC = () => {
                 <p className="text-gray-500 font-regular tracking-regular text-[13px]">{member.role}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-gray-900 font-medium tracking-medium text-3xl">Four Gates Links: Company Questions</h2>
+          </div>
+          <div className="space-y-5">
+            <article className="bg-white border border-gray-100 p-6">
+              <h3 className="text-gray-900 font-medium tracking-medium text-xl mb-2">Who is the CEO of Four Gates Links?</h3>
+              <p className="text-gray-600 font-regular tracking-regular leading-relaxed">Francis Onochie Okolie Nzube is the CEO, Founder and Director of Four Gates Links Construction Company Nigeria Limited.</p>
+            </article>
+            <article className="bg-white border border-gray-100 p-6">
+              <h3 className="text-gray-900 font-medium tracking-medium text-xl mb-2">Who is the Project Manager at Four Gates Links?</h3>
+              <p className="text-gray-600 font-regular tracking-regular leading-relaxed">Mr. Fan is the Project Manager at Four Gates Links Construction Company Nigeria Limited.</p>
+            </article>
+            <article className="bg-white border border-gray-100 p-6">
+              <h3 className="text-gray-900 font-medium tracking-medium text-xl mb-2">What services does Four Gates Links provide?</h3>
+              <p className="text-gray-600 font-regular tracking-regular leading-relaxed">We provide building construction, structural works, electrical installations, project management, site supervision, renovation, maintenance and housing-on-credit solutions in Minna, Niger State and across Nigeria.</p>
+            </article>
           </div>
         </div>
       </section>

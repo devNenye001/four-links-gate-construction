@@ -52,6 +52,7 @@ export const Services: React.FC = () => {
         title="Engineering & Construction Services | Four Gates Links"
         description="Explore our specialized construction services in Nigeria: building construction, structural engineering, electrical wiring, distribution switchgear, site supervision, and property renovations."
         canonical="https://fourgateslink.com/services"
+        ogImage="https://fourgateslink.com/g30.jpeg"
         keywords="construction services minna, electrical installations niger state, structural engineering nigeria, site supervision, commercial renovation"
         schema={[
           {
@@ -91,7 +92,7 @@ export const Services: React.FC = () => {
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
-        style={{ backgroundImage: "url('/services-page-banner.jpg')" }}
+        style={{ backgroundImage: "url('/g30.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
 

@@ -17,6 +17,7 @@ export const Contact: React.FC = () => {
         title="Contact Us | Four Gates Links Construction Minna Office"
         description="Contact Four Gates Links Construction Company Nigeria Limited. Visit our Minna office opposite Bahago Plaza, call 07031033348 / 07049463239, or message us on WhatsApp."
         canonical="https://fourgateslink.com/contact"
+        ogImage="https://fourgateslink.com/g10.jpeg"
         keywords="contact four gates links, construction company minna phone, niger state builders contact, tunga minna civil engineering"
         schema={{
           '@context': 'https://schema.org',
@@ -51,7 +52,7 @@ export const Contact: React.FC = () => {
       {/* Hero Section Container */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
-        style={{ backgroundImage: "url('/contact-page-banner.jpg')" }}
+        style={{ backgroundImage: "url('/g10.jpeg')" }}
       >
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/55 z-0" />

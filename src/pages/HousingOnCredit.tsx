@@ -18,6 +18,7 @@ export const HousingOnCredit: React.FC = () => {
         title="Housing on Credit Scheme | Flexible Home Ownership Nigeria"
         description="Own a home or acquire land in Minna and Niger State with Four Gates Links' flexible Housing on Credit scheme. Spread payments over convenient installments."
         canonical="https://fourgateslink.com/housing-on-credit"
+        ogImage="https://fourgateslink.com/g35.jpeg"
         keywords="housing on credit nigeria, pay small small house minna, installment land buy niger state, affordable housing schemes nigeria, four gates housing"
         schema={[
           {
@@ -55,7 +56,7 @@ export const HousingOnCredit: React.FC = () => {
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
-        style={{ backgroundImage: "url('/housing-on-credit-banner.jpg')" }}
+        style={{ backgroundImage: "url('/g35.jpeg')" }}
       >
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/55 z-0" />

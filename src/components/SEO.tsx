@@ -7,7 +7,7 @@ export interface SEOProps {
   canonical?: string;
   ogType?: 'website' | 'article' | 'business.business';
   ogImage?: string;
-  schema?: Record<string, any> | Array<Record<string, any>>;
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -129,12 +129,31 @@ export const SEO: React.FC<SEOProps> = ({
       ],
       founder: {
         '@type': 'Person',
+        '@id': 'https://fourgateslink.com/about#ceo',
         name: 'Francis Onochie Okolie Nzube',
         alternateName: ['Francis Okolie', 'Francis Onochie Okolie', 'Francis Nzube', 'CEO Four Gates Links'],
-        jobTitle: 'Founder and Director',
+        jobTitle: 'CEO, Founder and Director',
         image: 'https://fourgateslink.com/ceo.jpeg',
         url: 'https://fourgateslink.com/about'
       },
+      employee: [
+        {
+          '@type': 'Person',
+          '@id': 'https://fourgateslink.com/about#project-manager',
+          name: 'Mr. Fan',
+          jobTitle: 'Project Manager',
+          image: 'https://fourgateslink.com/mr-fan.jpeg',
+          url: 'https://fourgateslink.com/about'
+        },
+        {
+          '@type': 'Person',
+          '@id': 'https://fourgateslink.com/about#head-of-engineering',
+          name: 'Muhammad Bulus',
+          jobTitle: 'Head of Engineering Department',
+          image: 'https://fourgateslink.com/bulus.jpeg',
+          url: 'https://fourgateslink.com/about'
+        }
+      ],
       knowsAbout: [
         'Building Construction',
         'Structural Engineering',

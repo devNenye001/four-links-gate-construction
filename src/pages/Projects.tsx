@@ -54,6 +54,7 @@ export const Projects: React.FC = () => {
         title="Our Projects & Work Portfolio | Four Gates Links"
         description="Explore our completed and ongoing building construction, civil engineering, and infrastructure projects across Niger State and Nigeria."
         canonical="https://fourgateslink.com/projects"
+        ogImage="https://fourgateslink.com/g20.jpeg"
         keywords="construction projects minna, building portfolio nigeria, civil engineering works, niger state buildings, four gates links gallery, site videos"
         schema={{
           '@context': 'https://schema.org',
@@ -88,7 +89,7 @@ export const Projects: React.FC = () => {
       {/* 1. Hero Section */}
       <div 
         className="relative w-full h-[360px] md:h-[420px] bg-cover bg-center overflow-hidden flex flex-col justify-between" 
-        style={{ backgroundImage: "url('/projects-page-banner.jpg')" }}
+        style={{ backgroundImage: "url('/g20.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
 
