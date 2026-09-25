@@ -525,7 +525,7 @@ export const Home: React.FC = () => {
           {/* Right Image (Height reduced, aligned with steps, straight borders) */}
           <div className="h-[400px] md:h-[480px] w-full overflow-hidden border border-gray-100">
             <img 
-              src="/mr-fan.jpeg"
+              src="/choose1.jpeg"
               alt="Four Gates Links Construction Site Process" 
               className="w-full h-full object-cover"
             />
